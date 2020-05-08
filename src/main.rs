@@ -33,6 +33,13 @@ fn main() {
             Ordering::Equal => {
                 println!("You win!");
                 println!("It took you {} guesses.", guess_count);
+                if guess_count < 5 {
+                    println!("Well done!");
+                } else if guess_count <= 10 {
+                    println!("Not bad.");
+                } else {
+                    println!("Meh.");
+                };
                 break;
             },
        }
